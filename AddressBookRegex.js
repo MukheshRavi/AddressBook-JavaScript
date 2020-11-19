@@ -134,3 +134,13 @@ let editContact = contactsArray.filter(p => p.firstName == "Mukhesh" && p.lastNa
 editContact.email = "mukesh@gmail.com";
 console.log(editContact);
 console.log(contactsArray);
+// UC 5 Delete existing contact
+searchedContact = contactsArray.filter(p => p.firstName == "Ram" && p.lastName == "Kumar")[0];
+var index = contactsArray.indexOf(searchedContact);
+console.log(index);
+if (index != -1)
+ {
+  contactsArray.splice(index, 1);
+}
+console.log(contactsArray);
+
