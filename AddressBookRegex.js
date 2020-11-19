@@ -4,6 +4,11 @@ class AddressBook
     // Creating parametrized constructor
     constructor(...params)
     {
+        if(!CheckDuplicates(params[0],params[1]))
+        {
+            console.log("Contact already exists");
+            return;
+        }
         this.firstName= params[0];
         this.lastName= params[1];
         this.address= params[2];
@@ -143,4 +148,14 @@ console.log(contactsArray);
 let count = contactsArray.reduce(((count,contact) => {count+=1;
     return count;}),0);
 console.log(count);
+// UC 7 Check For Duplicates
+function CheckDuplicates(FirstName,LastName)
+{
+    searchedContact = contactsArray.filter(p => p.firstName == FirstName && p.lastName == LastName)[0];
+    var index = contactsArray.indexOf(searchedContact);
+    if(index=-1)
+    return true;
+}
+contactsArray.push(new AddressBook("Prasad","Rao","Jaya nagar","Nellore","Andhrapradesh","486213","9490476083","prasad@gmail.com"));
+
 
