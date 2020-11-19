@@ -157,7 +157,9 @@ function CheckDuplicates(FirstName,LastName)
     return true;
 }
 contactsArray.push(new AddressBook("Prasad","Rao","Jaya nagar","Nellore","Andhrapradesh","486213","9490476083","prasad@gmail.com"));
-// UC 8 Search Person In city
+// UC 8
+//UC 9
+// Search Person In city
 function SearchContactInCity(City)
 {
     let cityArray = contactsArray.filter(p =>p.city == City);
@@ -165,4 +167,13 @@ function SearchContactInCity(City)
     console.log(cityArray);
 }
 SearchContactInCity("ParvathiPuram");
-
+//uC 10
+//Count by city or state
+function CountContactInCity(City)
+{
+    let cityArray = contactsArray.filter(p =>p.city == City);
+    let count=cityArray.reduce(((count,contact) => {count+=1;
+        return count;}),0);
+    console.log(count);
+}
+CountContactInCity("ParvathiPuram");
