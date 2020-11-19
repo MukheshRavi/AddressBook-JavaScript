@@ -177,3 +177,12 @@ function CountContactInCity(City)
     console.log(count);
 }
 CountContactInCity("ParvathiPuram");
+// UC 11 Sort by person name
+function SortByPersonName()
+{
+    let sortedArray = contactsArray;
+    sortedArray.sort((a,b) => a.firstName.toLowerCase().localeCompare(b.firstName.toLowerCase()));
+    console.log("\n\nPrinting sorted array by person name : ");
+    sortedArray.forEach(p => console.log("\n"+p.toString()));
+}
+SortByPersonName();
