@@ -157,5 +157,12 @@ function CheckDuplicates(FirstName,LastName)
     return true;
 }
 contactsArray.push(new AddressBook("Prasad","Rao","Jaya nagar","Nellore","Andhrapradesh","486213","9490476083","prasad@gmail.com"));
-
+// UC 8 Search Person In city
+function SearchContactInCity(City)
+{
+    let cityArray = contactsArray.filter(p =>p.city == City);
+    console.log("Searched contacts in city "+ City);
+    console.log(cityArray);
+}
+SearchContactInCity("ParvathiPuram");
 
