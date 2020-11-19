@@ -121,7 +121,6 @@ contactsArray.push(contact);
 contactsArray.push(new AddressBook("Ravi","Attuluri","Star nagar","Karimnagar","Telangana","123213","7996541252","Ravi@gmail.com"));
 contactsArray.push(new AddressBook("Prasad","Rao","Jaya nagar","Nellore","Andhrapradesh","486213","9490476083","prasad@gmail.com"));
 contactsArray.push(new AddressBook("Ram","Kumar","Gandhi street","Warangal","Telangana","789632","9600577672","ram@gmail.com"));
-EditContact(contactsArray,"mukesh@gmail.com");
 console.log(contactsArray);
 }
 catch(e)
@@ -137,10 +136,11 @@ console.log(contactsArray);
 // UC 5 Delete existing contact
 searchedContact = contactsArray.filter(p => p.firstName == "Ram" && p.lastName == "Kumar")[0];
 var index = contactsArray.indexOf(searchedContact);
-console.log(index);
 if (index != -1)
- {
   contactsArray.splice(index, 1);
-}
 console.log(contactsArray);
+// UC 6 Count number of contacts
+let count = contactsArray.reduce(((count,contact) => {count+=1;
+    return count;}),0);
+console.log(count);
 
