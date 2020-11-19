@@ -114,6 +114,14 @@ class AddressBook
 try{
 let contact= new AddressBook("Mukhesh","Attuluri","Vemakotavari street","ParvathiPuram","AndhraPradesh","535501","8978496720","mkh@gmail.com");
 console.log(contact.toString());
+//UC3 
+//Create AddressBook Array
+let contactsArray=[];
+contactsArray.push(contact);
+contactsArray.push(new AddressBook("Ravi","Attuluri","Star nagar","Karimnagar","Telangana","123213","7996541252","Ravi@gmail.com"));
+contactsArray.push(new AddressBook("Prasad","Rao","Jaya nagar","Nellore","Andhrapradesh","486213","9490476083","prasad@gmail.com"));
+contactsArray.push(new AddressBook("Ram","Kumar","Gandhi street","Warangal","Telangana","789632","9600577672","ram@gmail.com"));
+console.log(contactsArray);
 }
 catch(e)
 {
